@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(160deg, #0d1b2a 0%, #0a1628 40%, #091422 100%);
+  min-height: 100vh;
+  color: #e2e8f0;
+}
+
+/* ── App Wrapper ── */
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px 60px;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 720px;
+}
+
+/* ── Header ── */
+.app-header {
+  margin-bottom: 20px;
+}
+
+.app-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: -0.3px;
+}
+
+.app-subtitle {
+  font-size: 0.78rem;
+  color: #64748b;
+  margin-top: 3px;
+  letter-spacing: 0.1px;
+}
+
+/* ── Top Action ── */
+.top-actions {
+  margin-bottom: 18px;
+}
+
+.btn-add-country {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.btn-add-country:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.btn-add-country:active {
+  transform: translateY(0);
+}
+
+/* ── Country Card ── */
+.country-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.country-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ── Country Row ── */
+.country-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 14px;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+}
+
+.country-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+/* ── State Card ── */
+.state-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.state-card {
+  border-left: 3px solid #38bdf8;
+  margin: 10px 12px;
+  background: #243347;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* ── State Row ── */
+.state-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 12px;
+  background: #243347;
+  border-bottom: 1px solid #334155;
+}
+
+.state-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+/* ── City List ── */
+.city-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── City Row ── */
+.city-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-top: 1px solid #2d3f55;
+  background: #1e2d42;
+}
+
+.city-row:last-child {
+  border-bottom: none;
+}
+
+.city-name {
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  font-weight: 400;
+}
+
+/* ── Empty Rows ── */
+.empty-row {
+  padding: 10px 14px;
+  font-size: 0.78rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+.empty-row--city {
+  padding: 8px 12px;
+  font-size: 0.76rem;
+  color: #64748b;
+  font-style: italic;
+  background: #1e2d42;
+}
+
+/* ── Shared Row Actions ── */
+.row-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+/* ── Action Buttons ── */
+.btn-action {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 4px 11px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+  white-space: nowrap;
+}
+
+.btn-action:hover  { transform: translateY(-1px); }
+.btn-action:active { transform: translateY(0); }
+
+/* Edit button — subtle dark outline, white text */
+.btn-edit {
+  background: #1e293b;
+  border-color: #475569;
+  color: #e2e8f0;
+}
+.btn-edit:hover {
+  background: #2d3f55;
+  border-color: #64748b;
+}
+
+/* Delete button — red tint */
+.btn-delete {
+  background: #1e293b;
+  border-color: #7f1d1d;
+  color: #f87171;
+}
+.btn-delete:hover {
+  background: #2d1a1a;
+  border-color: #ef4444;
+}
+
+/* Add State / Add City — blue tint */
+.btn-add {
+  background: #1e293b;
+  border-color: #1e40af;
+  color: #93c5fd;
+}
+.btn-add:hover {
+  background: #1e2f4a;
+  border-color: #3b82f6;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+
+/* ── Responsive ── */
+@media (max-width: 500px) {
+  .app-title { font-size: 1.3rem; }
+  .country-row,
+  .state-row  { flex-wrap: wrap; gap: 8px; }
+  .row-actions { flex-wrap: wrap; }
+}
